@@ -30,7 +30,7 @@
         {
             this.btnExplorarArchivo = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRuta = new System.Windows.Forms.TextBox();
             this.RdnRecepcionPedido = new System.Windows.Forms.RadioButton();
             this.rdnRecepcionLogistica = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -63,15 +63,15 @@
             this.openFileDialog1.FileName = "*.txt";
             this.openFileDialog1.InitialDirectory = "C:";
             // 
-            // textBox1
+            // txtRuta
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(36, 49);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Ruta del archivo";
+            this.txtRuta.Enabled = false;
+            this.txtRuta.Location = new System.Drawing.Point(36, 49);
+            this.txtRuta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRuta.Name = "txtRuta";
+            this.txtRuta.Size = new System.Drawing.Size(191, 22);
+            this.txtRuta.TabIndex = 1;
+            this.txtRuta.Text = "Ruta del archivo";
             // 
             // RdnRecepcionPedido
             // 
@@ -121,6 +121,7 @@
             this.RdnEnvioLogistica.TabIndex = 6;
             this.RdnEnvioLogistica.Text = "Envio a logistica";
             this.RdnEnvioLogistica.UseVisualStyleBackColor = true;
+            this.RdnEnvioLogistica.CheckedChanged += new System.EventHandler(this.RdnEnvioLogistica_CheckedChanged);
             // 
             // rdnRecepcionStock
             // 
@@ -174,6 +175,7 @@
             this.btnStock.TabIndex = 10;
             this.btnStock.Text = "Ver Stock Actual";
             this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // btnPedidosTot
             // 
@@ -196,7 +198,7 @@
             this.Controls.Add(this.ConfirmacionProcesado);
             this.Controls.Add(this.btnProcesar);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRuta);
             this.Controls.Add(this.btnExplorarArchivo);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmTP1";
@@ -213,7 +215,7 @@
 
         private System.Windows.Forms.Button btnExplorarArchivo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRuta;
         private System.Windows.Forms.RadioButton RdnRecepcionPedido;
         private System.Windows.Forms.RadioButton rdnRecepcionLogistica;
         private System.Windows.Forms.GroupBox groupBox1;

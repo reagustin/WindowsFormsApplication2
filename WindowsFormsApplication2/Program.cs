@@ -8,6 +8,9 @@ namespace WindowsFormsApplication2
 {
     static class Program
     {
+        public static string RazonSocial = "Ponzio SRL";
+        public static string CUIT = "20-12774982-2";
+        public static string Domicilio = "Hortiguera 600";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

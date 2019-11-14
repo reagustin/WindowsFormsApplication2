@@ -17,6 +17,8 @@ namespace WindowsFormsApplication2
         public Comercio comercio { get; set; }
         public List <Elemento> listaproducto { get; set; }
         public string codigo { get; set; }
+        public bool EnviadoLogistica { get; set; }
+        public bool Entregado { get; set; }
 
         public Pedido()
         {
